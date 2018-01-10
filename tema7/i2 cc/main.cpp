@@ -38,12 +38,11 @@ int main()
     }
     displayList();
 }
-
 void displayList()
 {
     cout<<"Displaying the list... ";
     current=first;
-    while(current->next !=NULL)
+    while(current->next!=NULL)
     {
         cout<<current->info;
         current=current->next;
