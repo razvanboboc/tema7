@@ -13,17 +13,17 @@ int main()
     int nr_elem;
     int i;
     struct mystruct *str;
-    str = (struct mystruct*)malloc(nr_elem * sizeof(struct mystruct));
+    str=(struct mystruct*)malloc(nr_elem * sizeof(struct mystruct));
     cout<<"Input number of elements: ";
     cin>>nr_elem;
-    for(i = 0; i < nr_elem; i++)
+    for(i=0;i<nr_elem;i++)
     {
         cout<<i;
         cin>>str[i].field1;
         cin>>str[i].field2;
         cin>>str[i].field3;
     }
-    for(i = 0; i < nr_elem; i++)
+    for(i=0;i<nr_elem;i++)
     {
         cout<<i;
         cout<<str[i].field1;
