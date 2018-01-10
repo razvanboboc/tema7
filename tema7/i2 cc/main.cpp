@@ -6,9 +6,7 @@ struct Node{
     int info;
     struct Node* next;
     struct Node* prev;};
-
 struct Node *first, *last, *current;
-
 void displayList();
 int main()
 {
@@ -28,15 +26,15 @@ int main()
         current->prev=last;
         if(first==NULL)
         {
-            first = current;
-            last = current;
+            first=current;
+            last=current;
         }
         else{
             last->next=current;
             last=current;
         }
-        first -> prev=last;
-        last -> next=first;
+        first->prev=last;
+        last->next=first;
     }
     displayList();
 }
@@ -48,7 +46,7 @@ void displayList()
     while(current->next !=NULL)
     {
         cout<<current->info;
-        current=current -> next;
+        current=current->next;
     }
     cout<<last->info;
 }
