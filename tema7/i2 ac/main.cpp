@@ -15,24 +15,23 @@ int main()
     cout<<"Input number of elements: ";
     cin>>nb_elements;
     cout<<"\n";
-    first = NULL;
-    last = NULL;
-    for(i = 0; i < nb_elements; ++i)
+    first=NULL;
+    last=NULL;
+    for(i=0;i<nb_elements;++i)
     {
         current = (struct Node*)malloc(sizeof(struct Node));
-
         cin>>i;
         cin>>current->info;
-        current->next = NULL;
-        current ->prev = last;
-        if(first == NULL)
+        current->next=NULL;
+        current->prev=last;
+        if(first==NULL)
         {
-            first = current;
-            last = current;
+            first=current;
+            last=current;
         }
         else{
-            last->next = current;
-            last = current;
+            last->next=current;
+            last=current;
         }
     }
     displayList();
@@ -41,11 +40,11 @@ int main()
 void displayList()
 {
     cout<<"Displaying the list... ";
-    current = first;
-    while(current->next != NULL)
+    current=first;
+    while(current->next!=NULL)
     {
         cout<<current->info;
-        current = current -> next;
+        current=current->next;
     }
     cout<<last->info;
 }
